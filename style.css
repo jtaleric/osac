@@ -1,0 +1,121 @@
+:root {
+    --gold: #d4af37;
+    --dark-bg: #121212;
+    --light-bg: #1e1e1e;
+    --text-white: #ffffff;
+    --text-gray: #bbbbbb;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); letter-spacing: 2px; }
+.links a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+.nav-btn { background: var(--gold); color: #000 !important; padding: 8px 15px; border-radius: 4px; }
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80'); /* Sample gym background */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+}
+
+.hero h1 { font-size: 4rem; text-transform: uppercase; margin: 0; line-height: 1; }
+.hero p { max-width: 700px; margin: 20px auto; font-size: 1.2rem; color: var(--text-gray); }
+
+/* Sections */
+.section { padding: 80px 10%; }
+.dark { background-color: var(--light-bg); }
+.center { text-align: center; }
+.container { max-width: 1100px; margin: 0 auto; }
+h2 { font-size: 2.5rem; text-transform: uppercase; margin-bottom: 30px; color: var(--gold); }
+
+/* Program Grid */
+.program-grid, .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.program-card, .contact-box {
+    background: #252525;
+    padding: 30px;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.program-card h3 { color: var(--gold); margin-top: 0; }
+.btn { background: var(--gold); color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; border-radius: 4px; display: inline-block; }
+
+footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .links { display: none; } /* You can add a mobile menu later */
+}
+
+/* Workout Card Styling for Consistency */
+.gold-text {
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.workout-card {
+    background: var(--light-bg);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-header {
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-bottom: 10px;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.tag {
+    font-family: monospace;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+/* Ensure Markdown content looks good */
+.card-body h1, .card-body h2 { color: var(--gold); margin-top: 30px; }
+.card-body ul { padding-left: 20px; color: var(--text-gray); }
+.card-body strong { color: #fff; }

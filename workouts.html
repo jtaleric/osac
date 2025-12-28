@@ -1,0 +1,57 @@
+---
+layout: default
+title: Weekly Programming
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts | Omega Strength & Conditioning</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">OMEGA</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#programs">Programs</a>
+            <a href="workouts.html" class="active">Workouts</a>
+            <a href="index.html#contact" class="nav-btn">Contact</a>
+        </div>
+    </nav>
+
+    <header class="section dark">
+        <div class="container center">
+            <h1 class="gold-text">Weekly Programming</h1>
+            <p>Training cycles and daily sessions for Omega athletes.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            {% for workout in site.workouts reversed %}
+            <div class="workout-card">
+                <div class="card-header">
+                    <h2>{{ workout.title }}</h2>
+                    <span class="tag">{{ workout.date | date: "%B %d, %Y" }}</span>
+                </div>
+                
+                <div class="card-body">
+                    {{ workout.content }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Omega Strength and Conditioning. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

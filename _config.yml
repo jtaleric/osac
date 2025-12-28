@@ -1,0 +1,7 @@
+title: Omega Strength and Conditioning
+theme: jekyll-theme-slate # Optional, or keep your custom CSS
+collections:
+  workouts:
+    output: true
+    sort_by: date
+    sort_order: reverse

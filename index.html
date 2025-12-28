@@ -1,0 +1,104 @@
+To mimic the OSAC site, we will update your index.html to include the specific sections from that page: Mission, Programs, FAQ, and Contact.
+
+I have also updated the CSS to use the Dark/Gold/White color palette seen in your inspiration site.
+
+1. The Updated Home Page (index.html)
+Replace your current index.html with this code. It includes the navigation links and the specific content from the OSAC site.
+
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Strength & Conditioning | Unlock Your Potential</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">OMEGA</div>
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="workouts.html">Workouts</a>
+            <a href="#contact" class="nav-btn">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Unleash Your Potential</h1>
+            <p>Forging the next generation of elite athletes through cutting-edge strength and conditioning programs. Build strength, confidence, and discipline with us.</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </header>
+
+    <section id="about" class="section dark">
+        <div class="container">
+            <h2>Our Mission</h2>
+            <p class="mission-text">At Omega Strength and Conditioning, we are dedicated to providing a safe, effective, and empowering environment for young athletes. Our mission is to help them excel not just in sports, but in life, by instilling the core values of hard work, resilience, and self-belief. We believe in building champions from the inside out.</p>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <div class="container">
+            <h2 class="center">Our Programs</h2>
+            <div class="program-grid">
+                <div class="program-card">
+                    <h3>Foundational Strength</h3>
+                    <p>Perfect for beginners. We focus on mastering fundamental movements, building a solid strength base, and preventing injuries.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Advanced Athlete</h3>
+                    <p>For experienced athletes looking to maximize performance. We focus on explosive power, speed, agility and strength.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Team Training</h3>
+                    <p>Customized group sessions designed to build team cohesion, improve collective performance, and dominate the competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section dark">
+        <div class="container">
+            <h2 class="center">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <p><strong>What age groups do you train?</strong> We specialize in middle school, high school, and collegiate athletes.</p>
+            </div>
+            <div class="faq-item">
+                <p><strong>Do I need prior experience?</strong> No. Our Foundational Strength program is designed specifically for beginners.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="center">Reach Out</h2>
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h4>Email Us</h4>
+                    <p><a href="mailto:joe.talerico+omega@gmail.com">joe.talerico+omega@gmail.com</a></p>
+                </div>
+                <div class="contact-box">
+                    <h4>Call or Text</h4>
+                    <p><a href="tel:9197603476">(919) 760-3476</a></p>
+                </div>
+                <div class="contact-box">
+                    <h4>Join Mailing List</h4>
+                    <p><a href="https://docs.google.com/forms/d/1qCHiaVfUnQ1sZLoFb1-4GzipTgFWtEObtq59cGUQr34/edit" target="_blank">Fill out our Google Form</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Omega Strength and Conditioning. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
