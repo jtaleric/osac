@@ -1,121 +1,136 @@
 :root {
     --gold: #d4af37;
-    --dark-bg: #121212;
-    --light-bg: #1e1e1e;
-    --text-white: #ffffff;
-    --text-gray: #bbbbbb;
+    --black: #000000;
+    --dark-grey: #1a1a1a;
+    --light-grey: #2a2a2a;
+    --text-main: #f4f4f4;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* This uses the image from your existing site */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://photos.smugmug.com/Sports/Bulldogs-09272025/i-MgbbpsN/0/LZdVprVrLdQSp6Lj73fWpkbN3TxP4DxNCsgmcDsCC/4K/IMG_5572-4K.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect from the original site */
+    padding: 0 20px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem); /* Responsive sizing */
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    color: #e0e0e0;
+}
+
+.btn {
+    background-color: #d4af37; /* The Omega Gold */
+    color: black;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    margin-left: 15px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-white);
-    line-height: 1.6;
-    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--black);
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
-/* Nav */
+/* Updated Nav for your Logo */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background: rgba(0,0,0,0.9);
+    padding: 15px 5%;
+    background-color: var(--black);
+    border-bottom: 2px solid var(--gold);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); letter-spacing: 2px; }
-.links a { color: #fff; text-decoration: none; margin-left: 25px; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
-.nav-btn { background: var(--gold); color: #000 !important; padding: 8px 15px; border-radius: 4px; }
-
-/* Hero */
-.hero {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80'); /* Sample gym background */
-    background-size: cover;
-    background-position: center;
-    padding: 0 20px;
+.logo img {
+    height: 50px; /* Adjust based on your logo shape */
+    width: auto;
 }
 
-.hero h1 { font-size: 4rem; text-transform: uppercase; margin: 0; line-height: 1; }
-.hero p { max-width: 700px; margin: 20px auto; font-size: 1.2rem; color: var(--text-gray); }
+.links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 20px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.links a:hover, .links a.active {
+    color: var(--gold);
+}
 
 /* Sections */
-.section { padding: 80px 10%; }
-.dark { background-color: var(--light-bg); }
-.center { text-align: center; }
-.container { max-width: 1100px; margin: 0 auto; }
-h2 { font-size: 2.5rem; text-transform: uppercase; margin-bottom: 30px; color: var(--gold); }
-
-/* Program Grid */
-.program-grid, .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+.section {
+    padding: 60px 10%;
 }
 
-.program-card, .contact-box {
-    background: #252525;
-    padding: 30px;
-    border-radius: 8px;
-    border-bottom: 4px solid var(--gold);
+.section.dark-alt {
+    background-color: var(--dark-grey);
 }
 
-.program-card h3 { color: var(--gold); margin-top: 0; }
-.btn { background: var(--gold); color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; text-transform: uppercase; border-radius: 4px; display: inline-block; }
-
-footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .links { display: none; } /* You can add a mobile menu later */
-}
-
-/* Workout Card Styling for Consistency */
-.gold-text {
-    color: var(--gold);
+/* Typography */
+h1, h2, h3 {
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.workout-card {
-    background: var(--light-bg);
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 40px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.card-header {
-    border-bottom: 2px solid var(--gold);
-    margin-bottom: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding-bottom: 10px;
-}
-
-.card-header h2 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-.tag {
-    font-family: monospace;
+h2 {
     color: var(--gold);
-    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
-/* Ensure Markdown content looks good */
-.card-body h1, .card-body h2 { color: var(--gold); margin-top: 30px; }
-.card-body ul { padding-left: 20px; color: var(--text-gray); }
-.card-body strong { color: #fff; }
+/* Workout Cards (Matching the Gist Style) */
+.workout-card {
+    background-color: var(--dark-grey);
+    border: 1px solid var(--light-grey);
+    border-left: 5px solid var(--gold); /* Brand accent */
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.workout-card h1 { color: var(--gold); border-bottom: 1px solid var(--light-grey); padding-bottom: 10px; }
+.workout-card h2 { color: white; font-size: 1.5rem; }
+.workout-card code { background: #000; color: var(--gold); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
