@@ -6,7 +6,35 @@
     --text-main: #f4f4f4;
 }
 
+/* FORCE FULL WIDTH */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Stops horizontal shaking/scrolling */
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+}
+
+/* Base Layout */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limits content width, but NOT background width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero should ALWAYS be edge-to-edge */
+
 .hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    min-height: 80vh;
+    background-size: cover !important;
+    background-position: center !important;
     height: 100vh;
     display: flex;
     align-items: center;

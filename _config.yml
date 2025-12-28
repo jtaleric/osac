@@ -1,7 +1,26 @@
-title: Omega Strength and Conditioning
-theme: jekyll-theme-slate # Optional, or keep your custom CSS
+# Site Settings
+title: Omega Strength & Conditioning
+description: Forging the next generation of elite athletes.
+baseurl: "/osac" # This must match your repository name
+url: "https://jtaleric.github.io"
+
+# Collections for Workouts
 collections:
   workouts:
     output: true
-    sort_by: date
-    sort_order: reverse
+    permalink: /workouts/:path/
+
+# Build Settings
+# We leave 'theme' blank so GitHub uses your custom style.css exclusively
+theme: [] 
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Defaults for Markdown Files
+defaults:
+  - scope:
+      path: ""
+      type: "workouts"
+    values:
+      layout: "default"
