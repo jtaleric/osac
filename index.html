@@ -1,96 +1,73 @@
+---
+layout: default
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omega Strength & Conditioning | Unlock Your Potential</title>
+    <title>Omega Strength & Conditioning</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav>
-        <div class="logo">OMEGA</div>
+        <div class="logo"><img src="logo.png" alt="Omega Logo"></div>
         <div class="links">
-            <a href="index.html">Home</a>
             <a href="#about">About</a>
             <a href="#programs">Programs</a>
-            <a href="workouts.html">Workouts</a>
+            <a href="#workouts">Workouts</a>
             <a href="#contact" class="nav-btn">Contact</a>
         </div>
     </nav>
 
-  <header class="hero">
-    <div class="hero-content">
-        <h1>Unleash Your Potential</h1>
-        <p>Forging the next generation of elite athletes through cutting-edge strength and conditioning programs. Build strength, confidence, and discipline with us.</p>
-        <div class="hero-btns">
-            <a href="#contact" class="btn">Contact Us</a>
-            <a href="workouts.html" class="btn btn-outline">View Workouts</a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Unleash Your Potential</h1>
+            <p>Forging the next generation of elite athletes.</p>
+            <a href="#workouts" class="btn">View Today's Workout</a>
         </div>
-    </div>
-  </header>
+    </header>
 
-    <section id="about" class="section dark">
+    <section id="about" class="section dark-alt">
         <div class="container">
             <h2>Our Mission</h2>
-            <p class="mission-text">At Omega Strength and Conditioning, we are dedicated to providing a safe, effective, and empowering environment for young athletes. Our mission is to help them excel not just in sports, but in life, by instilling the core values of hard work, resilience, and self-belief. We believe in building champions from the inside out.</p>
+            <p>Building champions from the inside out.</p>
         </div>
     </section>
 
-    <section id="programs" class="section">
+    <section id="workouts" class="section">
         <div class="container">
-            <h2 class="center">Our Programs</h2>
-            <div class="program-grid">
-                <div class="program-card">
-                    <h3>Foundational Strength</h3>
-                    <p>Perfect for beginners. We focus on mastering fundamental movements, building a solid strength base, and preventing injuries.</p>
+            <h2 class="center">Weekly Programming</h2>
+            <p class="center" style="margin-bottom: 40px;">Check here daily for your updated strength and conditioning blocks.</p>
+            
+            <div class="workout-feed">
+                {% for workout in site.workouts reversed limit:3 %}
+                <div class="workout-card">
+                    <div class="card-header">
+                        <h3>{{ workout.title }}</h3>
+                        <span class="tag">{{ workout.date | date: "%B %d, %Y" }}</span>
+                    </div>
+                    <div class="card-body">
+                        {{ workout.content }}
+                    </div>
                 </div>
-                <div class="program-card">
-                    <h3>Advanced Athlete</h3>
-                    <p>For experienced athletes looking to maximize performance. We focus on explosive power, speed, agility and strength.</p>
-                </div>
-                <div class="program-card">
-                    <h3>Team Training</h3>
-                    <p>Customized group sessions designed to build team cohesion, improve collective performance, and dominate the competition.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="faq" class="section dark">
-        <div class="container">
-            <h2 class="center">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <p><strong>What age groups do you train?</strong> We specialize in middle school, high school, and collegiate athletes.</p>
-            </div>
-            <div class="faq-item">
-                <p><strong>Do I need prior experience?</strong> No. Our Foundational Strength program is designed specifically for beginners.</p>
+                {% endfor %}
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="center">Reach Out</h2>
-            <div class="contact-grid">
-                <div class="contact-box">
-                    <h4>Email Us</h4>
-                    <p><a href="mailto:joe.talerico+omega@gmail.com">joe.talerico+omega@gmail.com</a></p>
-                </div>
-                <div class="contact-box">
-                    <h4>Call or Text</h4>
-                    <p><a href="tel:9197603476">(919) 760-3476</a></p>
-                </div>
-                <div class="contact-box">
-                    <h4>Join Mailing List</h4>
-                    <p><a href="https://docs.google.com/forms/d/1qCHiaVfUnQ1sZLoFb1-4GzipTgFWtEObtq59cGUQr34/edit" target="_blank">Fill out our Google Form</a></p>
-                </div>
-            </div>
+    <section id="contact" class="section dark-alt">
+        <div class="container center">
+            <h2>Get in Contact</h2>
+            <p>Email: joe.talerico+omega@gmail.com</p>
+            <a href="https://docs.google.com/forms/d/1qCHiaVfUnQ1sZLoFb1-4GzipTgFWtEObtq59cGUQr34/edit" class="btn">Join Mailing List</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Omega Strength and Conditioning. All Rights Reserved.</p>
+        <p>&copy; 2025 Omega Strength and Conditioning.</p>
     </footer>
 
 </body>
