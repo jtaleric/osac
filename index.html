@@ -42,7 +42,7 @@ layout: default
             <p class="center" style="margin-bottom: 40px;">Check here daily for your updated strength and conditioning blocks.</p>
             
             <div class="workout-feed">
-                {% for workout in site.workouts reversed limit:10 %}
+                {% for workout in site.workouts reversed %}
                 <div class="workout-card">
                     <div class="card-header">
                         <h3>{{ workout.title }}</h3>
